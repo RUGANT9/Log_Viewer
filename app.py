@@ -238,13 +238,13 @@ def list_logs():
         return jsonify({'logs': [], 'error': str(e)})
 
 if __name__ == '__main__':
-    print("=" * 60)
-    print("🚀 Starting Automation Test Dashboard Server")
-    print("=" * 60)
-    print(f"📂 Log directory: {LOG_DIR}")
-    print(f"🌐 Dashboard URL: http://localhost:5000")
-    print(f"📊 API endpoint: http://localhost:5000/api/logs/microsoft_todo_automation.log")
-    print("=" * 60)
-    print("\nPress Ctrl+C to stop the server\n")
+    # print("=" * 60)
+    # print("🚀 Starting Automation Test Dashboard Server")
+    # print("=" * 60)
+    # print(f"📂 Log directory: {LOG_DIR}")
+    # print(f"🌐 Dashboard URL: http://localhost:5000")
+    # print(f"📊 API endpoint: http://localhost:5000/api/logs/microsoft_todo_automation.log")
+    # print("=" * 60)
+    # print("\nPress Ctrl+C to stop the server\n")
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True)
