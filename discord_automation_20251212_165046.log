@@ -1,0 +1,79 @@
+2025-12-12 16:50:46,437 [INFO] ==================================================
+2025-12-12 16:50:46,437 [INFO] STARTING COMPREHENSIVE DISCORD UI TEST SUITE
+2025-12-12 16:50:46,438 [INFO] ==================================================
+2025-12-12 16:50:46,438 [INFO] [TEST START] Send message to LeoValdez
+2025-12-12 16:50:46,438 [INFO] Screen resolution: 1920x1080
+2025-12-12 16:50:46,533 [INFO] System: Windows-11-10.0.26100
+2025-12-12 16:50:46,533 [INFO] Date/Time: 2025-12-12 16:50:46.533488
+2025-12-12 16:50:46,536 [INFO] Attempting to connect to Discord application...
+2025-12-12 16:50:46,675 [INFO] Successfully connected to Discord (attempt 1)
+2025-12-12 16:50:46,808 [INFO] Found window: @LeoValdez - Discord (class: Chrome_WidgetWin_1)
+2025-12-12 16:50:46,935 [WARNING] Using top_window as fallback
+2025-12-12 16:50:48,956 [INFO] Discord window title: @LeoValdez - Discord
+2025-12-12 16:50:48,956 [INFO] Connected to Discord app window.
+2025-12-12 16:50:49,970 [INFO] Searching for user: LeoValdez
+2025-12-12 16:50:51,023 [INFO] Found LeoValdez hyperlink: 'LeoValdez (direct message)'
+2025-12-12 16:50:51,024 [INFO] Clicking on hyperlink...
+2025-12-12 16:50:51,137 [INFO] Successfully clicked on LeoValdez hyperlink
+2025-12-12 16:50:53,139 [INFO] Opened DM with LeoValdez.
+2025-12-12 16:50:53,140 [INFO] Searching for message input field...
+2025-12-12 16:50:53,973 [INFO] Found potential message input: Document at position (562, 667)
+2025-12-12 16:50:55,109 [INFO] Typed message: Hi, how are you?
+2025-12-12 16:50:58,849 [INFO] Message sent successfully.
+2025-12-12 16:50:59,008 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\discord_message_sent_20251212_165058.png
+2025-12-12 16:50:59,008 [INFO] [TEST PASSED] Send message to LeoValdez completed successfully in 12.57s
+2025-12-12 16:50:59,009 [INFO] [TEST START] Mute and Deafen
+2025-12-12 16:50:59,010 [INFO] Screen resolution: 1920x1080
+2025-12-12 16:50:59,010 [INFO] System: Windows-11-10.0.26100
+2025-12-12 16:50:59,010 [INFO] Date/Time: 2025-12-12 16:50:59.010767
+2025-12-12 16:50:59,011 [INFO] Attempting to connect to Discord application...
+2025-12-12 16:50:59,180 [INFO] Successfully connected to Discord (attempt 1)
+2025-12-12 16:50:59,316 [INFO] Found window: @LeoValdez - Discord (class: Chrome_WidgetWin_1)
+2025-12-12 16:50:59,468 [WARNING] Using top_window as fallback
+2025-12-12 16:51:01,484 [INFO] Discord window title: @LeoValdez - Discord
+2025-12-12 16:51:01,485 [INFO] Connected to Discord app window.
+2025-12-12 16:51:03,066 [INFO] Found Mute button
+2025-12-12 16:51:04,188 [INFO] Clicked Mute button.
+2025-12-12 16:51:04,834 [INFO] Found Deafen button
+2025-12-12 16:51:05,956 [INFO] Clicked Deafen button.
+2025-12-12 16:51:06,073 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\discord_mute_deafen_20251212_165105.png
+2025-12-12 16:51:06,074 [INFO] [TEST PASSED] Mute and Deafen completed successfully in 7.06s
+2025-12-12 16:51:06,075 [INFO] [TEST START] Click Help Button
+2025-12-12 16:51:06,075 [INFO] Screen resolution: 1920x1080
+2025-12-12 16:51:06,075 [INFO] System: Windows-11-10.0.26100
+2025-12-12 16:51:06,076 [INFO] Date/Time: 2025-12-12 16:51:06.076185
+2025-12-12 16:51:06,077 [INFO] Attempting to connect to Discord application...
+2025-12-12 16:51:06,230 [INFO] Successfully connected to Discord (attempt 1)
+2025-12-12 16:51:06,379 [INFO] Found window: @LeoValdez - Discord (class: Chrome_WidgetWin_1)
+2025-12-12 16:51:06,517 [WARNING] Using top_window as fallback
+2025-12-12 16:51:08,536 [INFO] Discord window title: @LeoValdez - Discord
+2025-12-12 16:51:08,536 [INFO] Connected to Discord app window.
+2025-12-12 16:51:10,106 [INFO] Found Help button
+2025-12-12 16:51:11,222 [INFO] Clicked Help button.
+2025-12-12 16:51:14,380 [INFO] Closed browser tab.
+2025-12-12 16:51:14,381 [INFO] Attempting to connect to Discord application...
+2025-12-12 16:51:14,573 [INFO] Successfully connected to Discord (attempt 1)
+2025-12-12 16:51:14,751 [INFO] Found window: @LeoValdez - Discord (class: Chrome_WidgetWin_1)
+2025-12-12 16:51:14,920 [WARNING] Using top_window as fallback
+2025-12-12 16:51:16,943 [INFO] Discord window title: @LeoValdez - Discord
+2025-12-12 16:51:18,070 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\discord_help_clicked_20251212_165117.png
+2025-12-12 16:51:18,071 [INFO] [TEST PASSED] Click Help Button completed successfully in 12.00s
+2025-12-12 16:51:18,072 [INFO] [TEST START] Create New Server
+2025-12-12 16:51:18,072 [INFO] Screen resolution: 1920x1080
+2025-12-12 16:51:18,073 [INFO] System: Windows-11-10.0.26100
+2025-12-12 16:51:18,073 [INFO] Date/Time: 2025-12-12 16:51:18.073490
+2025-12-12 16:51:18,074 [INFO] Attempting to connect to Discord application...
+2025-12-12 16:51:18,236 [INFO] Successfully connected to Discord (attempt 1)
+2025-12-12 16:51:18,374 [INFO] Found window: @LeoValdez - Discord (class: Chrome_WidgetWin_1)
+2025-12-12 16:51:18,521 [WARNING] Using top_window as fallback
+2025-12-12 16:51:20,543 [INFO] Discord window title: @LeoValdez - Discord
+2025-12-12 16:51:20,543 [INFO] Connected to Discord app window.
+2025-12-12 16:51:22,161 [INFO] Found 'Add a Server' TreeItem
+2025-12-12 16:51:24,272 [INFO] Clicked 'Add a Server' button.
+2025-12-12 16:51:29,270 [INFO] Clicked 'Create My Own' button.
+2025-12-12 16:51:34,301 [INFO] Clicked 'For me and my friends' button.
+2025-12-12 16:51:40,298 [INFO] Entered server name: test server
+2025-12-12 16:51:46,336 [INFO] Clicked 'Create' button.
+2025-12-12 16:51:48,443 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\discord_server_created_20251212_165146.png
+2025-12-12 16:51:48,444 [INFO] Server 'test server' created successfully.
+2025-12-12 16:51:48,444 [INFO] [TEST PASSED] Create New Server completed successfully in 30.37s

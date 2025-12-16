@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Test Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card .label {
+            color: #888;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .stat-card.passed .value {
+            color: #10b981;
+        }
+
+        .stat-card.failed .value {
+            color: #ef4444;
+        }
+
+        .stat-card.partial .value {
+            color: #f59e0b;
+        }
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            min-height: 400px;
+        }
+
+        .chart-card h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .log-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .log-section h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .log-container {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .log-entry {
+            margin-bottom: 8px;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .log-entry.info {
+            color: #60a5fa;
+        }
+
+        .log-entry.warning {
+            color: #fbbf24;
+            background: rgba(251, 191, 36, 0.1);
+        }
+        .log-entry.error {
+            color: #f87171;
+            background: rgba(248, 113, 113, 0.1);
+        }
+
+        .log-entry.checkpoint {
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.1);
+            font-weight: bold;
+        }
+
+        .timestamp {
+            color: #888;
+            margin-right: 10px;
+        }
+
+        .file-selector {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .file-selector label {
+            font-weight: 600;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        .file-selector select {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 1em;
+            background: white;
+            cursor: pointer;
+        }
+
+        .file-selector button {
+        .file-selector button {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .file-selector button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .file-selector button:active {
+            transform: translateY(0);
+        }
+
+        .file-selector {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .file-selector select {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 1em;
+            background: white;
+            cursor: pointer;
+        .log-entry.error {
+            color: #f87171;
+            background: rgba(248, 113, 113, 0.1);
+        }
+
+        .log-entry.checkpoint {
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.1);
+            font-weight: bold;
+        }
+
+        .timestamp {
+            color: #888;
+            margin-right: 10px;
+        }
+
+        .timeline-marker.warning {
+        .timeline-content {
+            flex: 1;
+            margin-left: 20px;
+            background: #f9fafb;
+            padding: 18px;
+            border-radius: 10px;
+            border-left: 3px solid #e5e7eb;
+            transition: all 0.3s ease;
+        .file-selector select {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 1em;
+            background: white;
+            cursor: pointer;
+        }
+
+        .file-selector button {
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .file-selector button:hover {
+            background: #5568d3;
+        }
+
+        .timeline {
+            margin-top: 30px;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            bottom: -20px;
+            width: 2px;
+            background: #e5e7eb;
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-marker {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .timeline-marker.failed {
+            background: #ef4444;
+        }
+
+        .timeline-marker.warning {
+            background: #f59e0b;
+        }
+
+        .timeline-content {
+            flex: 1;
+            margin-left: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .timeline-content h4 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Automation Test Dashboard</h1>
+            <p class="subtitle">Real-time monitoring of Windows App Automation Tests</p>
+        </div>
+
+        <div class="file-selector">
+            <select id="logFileSelect">
+                <option value="">Loading logs...</option>
+            </select>
+            <button onclick="loadTestData()">Refresh Dashboard</button>
+        </div>
+
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <div class="label">Total Tests</div>
+                <div class="value" id="totalTests">-</div>
+            </div>
+            <div class="stat-card passed">
+                <div class="label">Passed</div>
+                <div class="value" id="passedTests">-</div>
+            </div>
+            <div class="stat-card failed">
+                <div class="label">Failed</div>
+                <div class="value" id="failedTests">-</div>
+            </div>
+            <div class="stat-card partial">
+                <div class="label">Partial</div>
+                <div class="value" id="partialTests">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Duration</div>
+                <div class="value" id="duration">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Success Rate</div>
+                <div class="value" id="successRate">-</div>
+            </div>
+        </div>
+
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h3>📊 Test Results Overview</h3>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>📈 Test Execution Timeline</h3>
+                <canvas id="timelineChart"></canvas>
+            </div>
+        </div>
+
+        <div class="log-section">
+            <h3>📋 Full Test Log</h3>
+            <div class="log-container" id="logContainer">
+                <div class="loading">Loading logs...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let pieChart, timelineChart;
+
+        async function loadAvailableLogs() {
+            try {
+                const response = await fetch('/api/logs');
+                const data = await response.json();
+                
+                const select = document.getElementById('logFileSelect');
+                select.innerHTML = '';
+                
+                if (data.logs && data.logs.length > 0) {
+                    data.logs.forEach(log => {
+                        const option = document.createElement('option');
+                        option.value = log;
+                        // Format the display name nicely
+                        const appName = log.replace('_automation.log', '').replace(/_/g, ' ');
+                        option.textContent = appName.split(' ').map(word => 
+                            word.charAt(0).toUpperCase() + word.slice(1)
+                        ).join(' ') + ' Test';
+                        select.appendChild(option);
+                    });
+                    
+                    // Add event listener for dropdown changes
+                    select.addEventListener('change', loadTestData);
+                    
+                    // Load the first log by default
+                    loadTestData();
+                } else {
+                    select.innerHTML = '<option>No logs found</option>';
+                }
+            } catch (error) {
+                console.error('Error loading log list:', error);
+                document.getElementById('logFileSelect').innerHTML = '<option>Error loading logs</option>';
+            }
+        }
+
+        async function loadTestData() {
+            const logFile = document.getElementById('logFileSelect').value;
+            if (!logFile || logFile === 'No logs found') {
+                return;
+            }
+            
+            // Update header with app name
+            const appName = logFile.replace('_automation.log', '').replace(/_/g, ' ');
+            document.querySelector('.header .subtitle').textContent = 
+                `Real-time monitoring of ${appName.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} Automation Test`;
+            
+            try {
+                const response = await fetch(`/api/logs/${logFile}`);
+                const data = await response.json();
+                
+                if (data.error) {
+                    console.error('Error:', data.error);
+                    return;
+                }
+                
+                updateStats(data);
+                updateCharts(data);
+                updateLogDisplay(data);
+            } catch (error) {
+                console.error('Error loading test data:', error);
+                alert('Failed to load test data. Make sure the server is running.');
+            }
+        }
+
+        function loadMockData() {
+            const mockData = {
+                totalTests: 4,
+                passed: 3,
+                failed: 0,
+                partial: 1,
+                duration: '48s',
+                successRate: 75,
+                checkpoints: [
+                    { name: 'List Creation', status: 'passed', time: '2s' },
+                    { name: 'List Rename', status: 'passed', time: '3s' },
+                    { name: 'Add Tasks', status: 'passed', time: '6s' },
+                    { name: 'Duplicate List', status: 'partial', time: '5s' }
+                ],
+                timeline: [
+                    { step: 'Connect to App', status: 'passed', time: '1.4s', timestamp: '14:35:52' },
+                    { step: 'Create New List', status: 'passed', time: '1.1s', timestamp: '14:35:53' },
+                    { step: 'Rename List', status: 'passed', time: '2.9s', timestamp: '14:35:56' },
+                    { step: 'Add First Task', status: 'passed', time: '2.7s', timestamp: '14:35:59' },
+                    { step: 'Add Second Task', status: 'passed', time: '2.5s', timestamp: '14:36:01' }
+                ],
+                logs: `2025-12-11 14:35:51,143 - INFO - Starting Microsoft To Do comprehensive automation test
+2025-12-11 14:35:52,529 - INFO - Successfully connected to Microsoft To Do
+2025-12-11 14:35:53,679 - INFO - Clicked 'New list' button successfully
+2025-12-11 14:35:56,761 - INFO - TEST CHECKPOINT: List name edit - PASSED
+2025-12-11 14:35:59,588 - INFO - Successfully added first task
+2025-12-11 14:36:01,214 - INFO - Successfully added second task
+2025-12-11 14:36:01,214 - INFO - TEST CHECKPOINT: Add to-do (both tasks) - PASSED`
+            };
+
+            updateStats(mockData);
+            updateCharts(mockData);
+            updateTimeline(mockData);
+            updateLogDisplay(mockData);
+        }
+
+        function updateStats(data) {
+            document.getElementById('totalTests').textContent = data.totalTests;
+            document.getElementById('passedTests').textContent = data.passed;
+            document.getElementById('failedTests').textContent = data.failed;
+            document.getElementById('partialTests').textContent = data.partial;
+            document.getElementById('duration').textContent = data.duration;
+            document.getElementById('successRate').textContent = data.successRate + '%';
+        }
+
+        function updateCharts(data) {
+            // Pie Chart
+            const pieCtx = document.getElementById('pieChart').getContext('2d');
+            if (pieChart) pieChart.destroy();
+            pieChart = new Chart(pieCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Passed', 'Failed', 'Partial'],
+                    datasets: [{
+                        data: [data.passed, data.failed, data.partial],
+                        backgroundColor: ['#10b981', '#ef4444', '#f59e0b'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Timeline Chart
+            const timelineCtx = document.getElementById('timelineChart').getContext('2d');
+            if (timelineChart) timelineChart.destroy();
+            timelineChart = new Chart(timelineCtx, {
+                type: 'line',
+                data: {
+                    labels: data.timeline.map(t => t.step),
+                    datasets: [{
+                        label: 'Execution Time (seconds)',
+                        data: data.timeline.map(t => parseFloat(t.time)),
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Time (s)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateTimeline(data) {
+            // This function is called from loadMockData but data.timeline 
+            // is already rendered via the timeline chart above
+        }
+
+        function updateLogDisplay(data) {
+            const logContainer = document.getElementById('logContainer');
+            const lines = data.logs.split('\n');
+            
+            logContainer.innerHTML = lines.map(line => {
+                let className = 'log-entry info';
+                if (line.includes('WARNING')) className = 'log-entry warning';
+                if (line.includes('ERROR')) className = 'log-entry error';
+                if (line.includes('CHECKPOINT')) className = 'log-entry checkpoint';
+                
+                const match = line.match(/^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3})/);
+                const timestamp = match ? match[1] : '';
+                const message = match ? line.substring(match[0].length) : line;
+                
+                return `<div class="${className}">
+                    ${timestamp ? `<span class="timestamp">${timestamp}</span>` : ''}
+                    <span>${message}</span>
+                </div>`;
+            }).join('');
+        }
+
+        // Load available logs and data on page load
+        window.onload = loadAvailableLogs;
+    </script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+2025-12-12 16:11:37,590 [INFO] ================================================================================
+2025-12-12 16:11:37,591 [INFO] STARTING NOTEPAD UI TEST
+2025-12-12 16:11:37,591 [INFO] ================================================================================
+2025-12-12 16:11:37,924 [INFO] === System Configuration ===
+2025-12-12 16:11:37,995 [INFO] OS: Windows 11
+2025-12-12 16:11:37,995 [INFO] OS Version: 10.0.26100
+2025-12-12 16:11:37,996 [INFO] Screen Resolution: 
+2025-12-12 16:11:37,996 [INFO] Test Start Time: 2025-12-12 16:11:37.996046
+2025-12-12 16:11:37,996 [INFO] ============================
+2025-12-12 16:11:37,996 [INFO] [TEST START] New Tab Bold Text
+2025-12-12 16:11:37,996 [INFO] Text to type: 'Hello World'
+2025-12-12 16:11:37,996 [INFO] ============================================================
+2025-12-12 16:11:37,996 [INFO] Step 1: Connecting to Notepad application...
+2025-12-12 16:11:40,156 [INFO] Successfully connected to Notepad
+2025-12-12 16:11:40,416 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_initial_state_20251212_161140.png
+2025-12-12 16:11:40,417 [INFO] ============================================================
+2025-12-12 16:11:40,417 [INFO] Step 2: Opening a new tab in Notepad...
+2025-12-12 16:11:41,574 [INFO] Opened new tab using Ctrl+T
+2025-12-12 16:11:41,756 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_new_tab_opened_20251212_161141.png
+2025-12-12 16:11:41,756 [INFO] ============================================================
+2025-12-12 16:11:41,756 [INFO] Step 3: Typing text 'Hello World'...
+2025-12-12 16:11:43,279 [INFO] Successfully typed: 'Hello World'
+2025-12-12 16:11:43,464 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_typed_20251212_161143.png
+2025-12-12 16:11:43,464 [INFO] ============================================================
+2025-12-12 16:11:43,464 [INFO] Step 4: Selecting all text...
+2025-12-12 16:11:44,121 [INFO] Selected all text using Ctrl+A
+2025-12-12 16:11:44,306 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_selected_20251212_161144.png
+2025-12-12 16:11:44,306 [INFO] ============================================================
+2025-12-12 16:11:44,306 [INFO] Step 5: Applying bold formatting...
+2025-12-12 16:11:44,963 [INFO] Applied bold formatting using Ctrl+B
+2025-12-12 16:11:45,147 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_bold_applied_20251212_161144.png
+2025-12-12 16:11:45,148 [INFO] ============================================================
+2025-12-12 16:11:45,148 [INFO] [TEST PASSED] New Tab Bold Text completed successfully in 7.56s
+2025-12-12 16:11:45,148 [INFO] All steps completed successfully!
+2025-12-12 16:11:45,727 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_final_state_20251212_161145.png
+2025-12-12 16:11:45,727 [INFO] ================================================================================
+2025-12-12 16:11:45,727 [INFO] TEST EXECUTION COMPLETED SUCCESSFULLY
+2025-12-12 16:11:45,727 [INFO] ================================================================================
+2025-12-12 16:14:28,368 [INFO] ================================================================================
+2025-12-12 16:14:28,368 [INFO] STARTING NOTEPAD UI TEST
+2025-12-12 16:14:28,368 [INFO] ================================================================================
+2025-12-12 16:14:28,741 [INFO] === System Configuration ===
+2025-12-12 16:14:28,823 [INFO] OS: Windows 11
+2025-12-12 16:14:28,823 [INFO] OS Version: 10.0.26100
+2025-12-12 16:14:28,823 [INFO] Screen Resolution: 
+2025-12-12 16:14:28,824 [INFO] Test Start Time: 2025-12-12 16:14:28.823988
+2025-12-12 16:14:28,824 [INFO] ============================
+2025-12-12 16:14:28,824 [INFO] [TEST START] New Tab Bold Text
+2025-12-12 16:14:28,824 [INFO] Text to type: 'Hello World'
+2025-12-12 16:14:28,824 [INFO] ============================================================
+2025-12-12 16:14:28,824 [INFO] Step 1: Connecting to Notepad application...
+2025-12-12 16:14:30,986 [INFO] Successfully connected to Notepad
+2025-12-12 16:14:31,215 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_initial_state_20251212_161430.png
+2025-12-12 16:14:31,216 [INFO] ============================================================
+2025-12-12 16:14:31,216 [INFO] Step 2: Opening a new tab in Notepad...
+2025-12-12 16:14:32,518 [INFO] Clicked 'Add New Tab' button successfully
+2025-12-12 16:14:32,737 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_new_tab_opened_20251212_161432.png
+2025-12-12 16:14:32,737 [INFO] ============================================================
+2025-12-12 16:14:32,737 [INFO] Step 3: Typing text 'Hello World'...
+2025-12-12 16:14:34,378 [INFO] Successfully typed: 'Hello World'
+2025-12-12 16:14:34,571 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_typed_20251212_161434.png
+2025-12-12 16:14:34,572 [INFO] ============================================================
+2025-12-12 16:14:34,572 [INFO] Step 4: Selecting all text...
+2025-12-12 16:14:35,229 [INFO] Selected all text using Ctrl+A
+2025-12-12 16:14:35,435 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_selected_20251212_161435.png
+2025-12-12 16:14:35,435 [INFO] ============================================================
+2025-12-12 16:14:35,435 [INFO] Step 5: Applying bold formatting...
+2025-12-12 16:14:35,580 [WARNING] Could not click Bold button: find_elements() got an unexpected keyword argument 'name'
+2025-12-12 16:14:35,580 [INFO] Fallback: Using Ctrl+B keyboard shortcut...
+2025-12-12 16:14:36,236 [INFO] Applied bold formatting using Ctrl+B
+2025-12-12 16:14:36,439 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_bold_applied_20251212_161436.png
+2025-12-12 16:14:36,439 [INFO] ============================================================
+2025-12-12 16:14:36,439 [INFO] [TEST PASSED] New Tab Bold Text completed successfully in 8.07s
+2025-12-12 16:14:36,439 [INFO] All steps completed successfully!
+2025-12-12 16:14:37,022 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_final_state_20251212_161436.png
+2025-12-12 16:14:37,023 [INFO] ================================================================================
+2025-12-12 16:14:37,023 [INFO] TEST EXECUTION COMPLETED SUCCESSFULLY
+2025-12-12 16:14:37,023 [INFO] ================================================================================
+2025-12-12 16:14:44,868 [INFO] ================================================================================
+2025-12-12 16:14:44,869 [INFO] STARTING NOTEPAD UI TEST
+2025-12-12 16:14:44,869 [INFO] ================================================================================
+2025-12-12 16:14:45,200 [INFO] === System Configuration ===
+2025-12-12 16:14:45,256 [INFO] OS: Windows 11
+2025-12-12 16:14:45,257 [INFO] OS Version: 10.0.26100
+2025-12-12 16:14:45,257 [INFO] Screen Resolution: 
+2025-12-12 16:14:45,257 [INFO] Test Start Time: 2025-12-12 16:14:45.257667
+2025-12-12 16:14:45,257 [INFO] ============================
+2025-12-12 16:14:45,258 [INFO] [TEST START] New Tab Bold Text
+2025-12-12 16:14:45,258 [INFO] Text to type: 'Hello World'
+2025-12-12 16:14:45,258 [INFO] ============================================================
+2025-12-12 16:14:45,258 [INFO] Step 1: Connecting to Notepad application...
+2025-12-12 16:14:47,291 [INFO] Successfully connected to Notepad
+2025-12-12 16:14:47,556 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_initial_state_20251212_161447.png
+2025-12-12 16:14:47,556 [INFO] ============================================================
+2025-12-12 16:14:47,556 [INFO] Step 2: Opening a new tab in Notepad...
+2025-12-12 16:14:48,865 [INFO] Clicked 'Add New Tab' button successfully
+2025-12-12 16:14:49,069 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_new_tab_opened_20251212_161448.png
+2025-12-12 16:14:49,069 [INFO] ============================================================
+2025-12-12 16:14:49,069 [INFO] Step 3: Typing text 'Hello World'...
+2025-12-12 16:14:50,694 [INFO] Successfully typed: 'Hello World'
+2025-12-12 16:14:50,898 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_typed_20251212_161450.png
+2025-12-12 16:14:50,898 [INFO] ============================================================
+2025-12-12 16:14:50,898 [INFO] Step 4: Selecting all text...
+2025-12-12 16:14:51,554 [INFO] Selected all text using Ctrl+A
+2025-12-12 16:14:51,719 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_selected_20251212_161451.png
+2025-12-12 16:14:51,719 [INFO] ============================================================
+2025-12-12 16:14:51,719 [INFO] Step 5: Applying bold formatting...
+2025-12-12 16:14:51,853 [WARNING] Could not click Bold button: find_elements() got an unexpected keyword argument 'name'
+2025-12-12 16:14:51,853 [INFO] Fallback: Using Ctrl+B keyboard shortcut...
+2025-12-12 16:14:52,509 [INFO] Applied bold formatting using Ctrl+B
+2025-12-12 16:14:52,701 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_bold_applied_20251212_161452.png
+2025-12-12 16:14:52,702 [INFO] ============================================================
+2025-12-12 16:14:52,702 [INFO] [TEST PASSED] New Tab Bold Text completed successfully in 7.83s
+2025-12-12 16:14:52,702 [INFO] All steps completed successfully!
+2025-12-12 16:14:53,297 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_final_state_20251212_161453.png
+2025-12-12 16:14:53,297 [INFO] ================================================================================
+2025-12-12 16:14:53,298 [INFO] TEST EXECUTION COMPLETED SUCCESSFULLY
+2025-12-12 16:14:53,298 [INFO] ================================================================================
+2025-12-12 16:15:05,052 [INFO] ================================================================================
+2025-12-12 16:15:05,052 [INFO] STARTING NOTEPAD UI TEST
+2025-12-12 16:15:05,053 [INFO] ================================================================================
+2025-12-12 16:15:05,413 [INFO] === System Configuration ===
+2025-12-12 16:15:05,479 [INFO] OS: Windows 11
+2025-12-12 16:15:05,480 [INFO] OS Version: 10.0.26100
+2025-12-12 16:15:05,480 [INFO] Screen Resolution: 
+2025-12-12 16:15:05,480 [INFO] Test Start Time: 2025-12-12 16:15:05.480381
+2025-12-12 16:15:05,480 [INFO] ============================
+2025-12-12 16:15:05,480 [INFO] [TEST START] New Tab Bold Text
+2025-12-12 16:15:05,480 [INFO] Text to type: 'Hello World'
+2025-12-12 16:15:05,480 [INFO] ============================================================
+2025-12-12 16:15:05,480 [INFO] Step 1: Connecting to Notepad application...
+2025-12-12 16:15:07,648 [INFO] Successfully connected to Notepad
+2025-12-12 16:15:07,847 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_initial_state_20251212_161507.png
+2025-12-12 16:15:07,848 [INFO] ============================================================
+2025-12-12 16:15:07,848 [INFO] Step 2: Opening a new tab in Notepad...
+2025-12-12 16:15:09,149 [INFO] Clicked 'Add New Tab' button successfully
+2025-12-12 16:15:09,349 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_new_tab_opened_20251212_161509.png
+2025-12-12 16:15:09,349 [INFO] ============================================================
+2025-12-12 16:15:09,349 [INFO] Step 3: Typing text 'Hello World'...
+2025-12-12 16:15:10,989 [INFO] Successfully typed: 'Hello World'
+2025-12-12 16:15:11,158 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_typed_20251212_161510.png
+2025-12-12 16:15:11,158 [INFO] ============================================================
+2025-12-12 16:15:11,159 [INFO] Step 4: Selecting all text...
+2025-12-12 16:15:11,817 [INFO] Selected all text using Ctrl+A
+2025-12-12 16:15:12,005 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_selected_20251212_161511.png
+2025-12-12 16:15:12,005 [INFO] ============================================================
+2025-12-12 16:15:12,005 [INFO] Step 5: Applying bold formatting...
+2025-12-12 16:15:12,157 [WARNING] Could not click Bold button: find_elements() got an unexpected keyword argument 'name'
+2025-12-12 16:15:12,157 [INFO] Fallback: Using Ctrl+B keyboard shortcut...
+2025-12-12 16:15:12,812 [INFO] Applied bold formatting using Ctrl+B
+2025-12-12 16:15:13,010 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_bold_applied_20251212_161512.png
+2025-12-12 16:15:13,010 [INFO] ============================================================
+2025-12-12 16:15:13,011 [INFO] [TEST PASSED] New Tab Bold Text completed successfully in 7.96s
+2025-12-12 16:15:13,011 [INFO] All steps completed successfully!
+2025-12-12 16:15:13,591 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_final_state_20251212_161513.png
+2025-12-12 16:15:13,592 [INFO] ================================================================================
+2025-12-12 16:15:13,592 [INFO] TEST EXECUTION COMPLETED SUCCESSFULLY
+2025-12-12 16:15:13,592 [INFO] ================================================================================
+2025-12-12 16:15:43,717 [INFO] ================================================================================
+2025-12-12 16:15:43,718 [INFO] STARTING NOTEPAD UI TEST
+2025-12-12 16:15:43,718 [INFO] ================================================================================
+2025-12-12 16:15:44,072 [INFO] === System Configuration ===
+2025-12-12 16:15:44,155 [INFO] OS: Windows 11
+2025-12-12 16:15:44,156 [INFO] OS Version: 10.0.26100
+2025-12-12 16:15:44,156 [INFO] Screen Resolution: 
+2025-12-12 16:15:44,156 [INFO] Test Start Time: 2025-12-12 16:15:44.156500
+2025-12-12 16:15:44,156 [INFO] ============================
+2025-12-12 16:15:44,156 [INFO] [TEST START] New Tab Bold Text
+2025-12-12 16:15:44,156 [INFO] Text to type: 'Hello World'
+2025-12-12 16:15:44,156 [INFO] ============================================================
+2025-12-12 16:15:44,156 [INFO] Step 1: Connecting to Notepad application...
+2025-12-12 16:15:46,364 [INFO] Successfully connected to Notepad
+2025-12-12 16:15:46,595 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_initial_state_20251212_161546.png
+2025-12-12 16:15:46,595 [INFO] ============================================================
+2025-12-12 16:15:46,596 [INFO] Step 2: Opening a new tab in Notepad...
+2025-12-12 16:15:47,900 [INFO] Clicked 'Add New Tab' button successfully
+2025-12-12 16:15:48,136 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_new_tab_opened_20251212_161547.png
+2025-12-12 16:15:48,138 [INFO] ============================================================
+2025-12-12 16:15:48,138 [INFO] Step 3: Typing text 'Hello World'...
+2025-12-12 16:15:49,764 [INFO] Successfully typed: 'Hello World'
+2025-12-12 16:15:49,932 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_typed_20251212_161549.png
+2025-12-12 16:15:49,933 [INFO] ============================================================
+2025-12-12 16:15:49,933 [INFO] Step 4: Selecting all text...
+2025-12-12 16:15:50,589 [INFO] Selected all text using Ctrl+A
+2025-12-12 16:15:50,751 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_selected_20251212_161550.png
+2025-12-12 16:15:50,751 [INFO] ============================================================
+2025-12-12 16:15:50,751 [INFO] Step 5: Applying bold formatting...
+2025-12-12 16:15:50,901 [WARNING] Could not click Bold button: find_elements() got an unexpected keyword argument 'name'
+2025-12-12 16:15:50,901 [INFO] Fallback: Using Ctrl+B keyboard shortcut...
+2025-12-12 16:15:51,560 [INFO] Applied bold formatting using Ctrl+B
+2025-12-12 16:15:51,816 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_bold_applied_20251212_161551.png
+2025-12-12 16:15:51,816 [INFO] ============================================================
+2025-12-12 16:15:51,817 [INFO] [TEST PASSED] New Tab Bold Text completed successfully in 8.10s
+2025-12-12 16:15:51,817 [INFO] All steps completed successfully!
+2025-12-12 16:15:52,385 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_final_state_20251212_161552.png
+2025-12-12 16:15:52,385 [INFO] ================================================================================
+2025-12-12 16:15:52,385 [INFO] TEST EXECUTION COMPLETED SUCCESSFULLY
+2025-12-12 16:15:52,385 [INFO] ================================================================================
+2025-12-12 16:18:24,048 [INFO] ================================================================================
+2025-12-12 16:18:24,049 [INFO] STARTING NOTEPAD UI TEST SUITE
+2025-12-12 16:18:24,049 [INFO] ================================================================================
+2025-12-12 16:18:24,401 [INFO] === System Configuration ===
+2025-12-12 16:18:24,469 [INFO] OS: Windows 11
+2025-12-12 16:18:24,469 [INFO] OS Version: 10.0.26100
+2025-12-12 16:18:24,469 [INFO] Screen Resolution: 
+2025-12-12 16:18:24,469 [INFO] Test Start Time: 2025-12-12 16:18:24.469527
+2025-12-12 16:18:24,469 [INFO] ============================
+2025-12-12 16:18:24,469 [INFO] [TEST START] New Tab Bold Text
+2025-12-12 16:18:24,469 [INFO] Text to type: 'Hello World'
+2025-12-12 16:18:24,469 [INFO] ============================================================
+2025-12-12 16:18:24,469 [INFO] Step 1: Connecting to Notepad application...
+2025-12-12 16:18:25,917 [INFO] Successfully connected to Notepad
+2025-12-12 16:18:26,141 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_initial_state_20251212_161825.png
+2025-12-12 16:18:26,142 [INFO] ============================================================
+2025-12-12 16:18:26,142 [INFO] Step 2: Opening a new tab in Notepad...
+2025-12-12 16:18:27,459 [INFO] Clicked 'Add New Tab' button successfully
+2025-12-12 16:18:27,702 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_new_tab_opened_20251212_161827.png
+2025-12-12 16:18:27,703 [INFO] ============================================================
+2025-12-12 16:18:27,703 [INFO] Step 3: Typing text 'Hello World'...
+2025-12-12 16:18:29,316 [INFO] Successfully typed: 'Hello World'
+2025-12-12 16:18:29,538 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_typed_20251212_161829.png
+2025-12-12 16:18:29,538 [INFO] ============================================================
+2025-12-12 16:18:29,538 [INFO] Step 4: Selecting all text...
+2025-12-12 16:18:30,195 [INFO] Selected all text using Ctrl+A
+2025-12-12 16:18:30,387 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_selected_20251212_161830.png
+2025-12-12 16:18:30,387 [INFO] ============================================================
+2025-12-12 16:18:30,387 [INFO] Step 5: Applying bold formatting...
+2025-12-12 16:18:30,537 [WARNING] Could not click Bold button: find_elements() got an unexpected keyword argument 'name'
+2025-12-12 16:18:30,537 [INFO] Fallback: Using Ctrl+B keyboard shortcut...
+2025-12-12 16:18:31,192 [INFO] Applied bold formatting using Ctrl+B
+2025-12-12 16:18:31,403 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_bold_applied_20251212_161831.png
+2025-12-12 16:18:31,403 [INFO] ============================================================
+2025-12-12 16:18:31,403 [INFO] [TEST PASSED] New Tab Bold Text completed successfully in 7.35s
+2025-12-12 16:18:31,403 [INFO] All steps completed successfully!
+2025-12-12 16:18:31,973 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_final_state_20251212_161831.png
+2025-12-12 16:18:34,384 [INFO] === System Configuration ===
+2025-12-12 16:18:34,384 [INFO] OS: Windows 11
+2025-12-12 16:18:34,384 [INFO] OS Version: 10.0.26100
+2025-12-12 16:18:34,384 [INFO] Screen Resolution: 
+2025-12-12 16:18:34,384 [INFO] Test Start Time: 2025-12-12 16:18:34.384688
+2025-12-12 16:18:34,384 [INFO] ============================
+2025-12-12 16:18:34,384 [INFO] [TEST START] View Zoom In
+2025-12-12 16:18:34,384 [INFO] ============================================================
+2025-12-12 16:18:34,384 [INFO] Step 1: Connecting to Notepad application...
+2025-12-12 16:18:35,822 [INFO] Successfully connected to Notepad
+2025-12-12 16:18:36,038 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_zoom_initial_state_20251212_161835.png
+2025-12-12 16:18:36,038 [INFO] ============================================================
+2025-12-12 16:18:36,038 [INFO] Step 2: Clicking on View menu...
+2025-12-12 16:18:37,341 [INFO] Clicked View menu successfully
+2025-12-12 16:18:37,572 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_view_menu_opened_20251212_161837.png
+2025-12-12 16:18:37,572 [INFO] ============================================================
+2025-12-12 16:18:37,572 [INFO] Step 3: Clicking on Zoom submenu...
+2025-12-12 16:18:37,734 [WARNING] Could not click Zoom submenu: find_elements() got an unexpected keyword argument 'name'
+2025-12-12 16:18:37,734 [INFO] Fallback: Using keyboard to navigate to Zoom...
+2025-12-12 16:18:38,786 [INFO] Navigated to Zoom using keyboard
+2025-12-12 16:18:39,000 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_zoom_submenu_opened_20251212_161838.png
+2025-12-12 16:18:39,001 [INFO] ============================================================
+2025-12-12 16:18:39,001 [INFO] Step 4: Clicking on Zoom In...
+2025-12-12 16:18:39,141 [WARNING] Could not click Zoom In: find_elements() got an unexpected keyword argument 'name'
+2025-12-12 16:18:39,142 [INFO] Fallback: Using Ctrl+Plus keyboard shortcut...
+2025-12-12 16:18:39,142 [ERROR] Failed to zoom in: Unknown code: ADD
+2025-12-12 16:18:39,358 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_zoom_in_applied_20251212_161839.png
+2025-12-12 16:18:39,359 [INFO] ============================================================
+2025-12-12 16:18:39,359 [INFO] [TEST PASSED] View Zoom In completed successfully in 5.38s
+2025-12-12 16:18:39,359 [INFO] All steps completed successfully!
+2025-12-12 16:18:39,359 [INFO] ================================================================================
+2025-12-12 16:18:39,359 [INFO] ALL TESTS COMPLETED SUCCESSFULLY
+2025-12-12 16:18:39,359 [INFO] ================================================================================
+2025-12-12 16:20:36,601 [INFO] ================================================================================
+2025-12-12 16:20:36,601 [INFO] STARTING NOTEPAD UI TEST SUITE
+2025-12-12 16:20:36,601 [INFO] ================================================================================
+2025-12-12 16:20:36,949 [INFO] === System Configuration ===
+2025-12-12 16:20:37,048 [INFO] OS: Windows 11
+2025-12-12 16:20:37,048 [INFO] OS Version: 10.0.26100
+2025-12-12 16:20:37,048 [INFO] Screen Resolution: 
+2025-12-12 16:20:37,048 [INFO] Test Start Time: 2025-12-12 16:20:37.048826
+2025-12-12 16:20:37,048 [INFO] ============================
+2025-12-12 16:20:37,048 [INFO] [TEST START] New Tab Bold Text
+2025-12-12 16:20:37,049 [INFO] Text to type: 'Hello World'
+2025-12-12 16:20:37,049 [INFO] ============================================================
+2025-12-12 16:20:37,049 [INFO] Step 1: Connecting to Notepad application...
+2025-12-12 16:20:38,448 [INFO] Successfully connected to Notepad
+2025-12-12 16:20:38,692 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_initial_state_20251212_162038.png
+2025-12-12 16:20:38,693 [INFO] ============================================================
+2025-12-12 16:20:38,693 [INFO] Step 2: Opening a new tab in Notepad...
+2025-12-12 16:20:39,989 [INFO] Clicked 'Add New Tab' button successfully
+2025-12-12 16:20:40,200 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_new_tab_opened_20251212_162039.png
+2025-12-12 16:20:40,201 [INFO] ============================================================
+2025-12-12 16:20:40,201 [INFO] Step 3: Typing text 'Hello World'...
+2025-12-12 16:20:41,931 [INFO] Successfully typed: 'Hello World'
+2025-12-12 16:20:42,170 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_typed_20251212_162041.png
+2025-12-12 16:20:42,171 [INFO] ============================================================
+2025-12-12 16:20:42,171 [INFO] Step 4: Selecting all text...
+2025-12-12 16:20:42,829 [INFO] Selected all text using Ctrl+A
+2025-12-12 16:20:43,056 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_text_selected_20251212_162042.png
+2025-12-12 16:20:43,057 [INFO] ============================================================
+2025-12-12 16:20:43,057 [INFO] Step 5: Applying bold formatting...
+2025-12-12 16:20:43,840 [INFO] Clicked Bold button successfully
+2025-12-12 16:20:44,051 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_bold_applied_20251212_162043.png
+2025-12-12 16:20:44,052 [INFO] ============================================================
+2025-12-12 16:20:44,052 [INFO] [TEST PASSED] New Tab Bold Text completed successfully in 7.45s
+2025-12-12 16:20:44,053 [INFO] All steps completed successfully!
+2025-12-12 16:20:44,642 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_final_state_20251212_162044.png
+2025-12-12 16:20:47,098 [INFO] === System Configuration ===
+2025-12-12 16:20:47,098 [INFO] OS: Windows 11
+2025-12-12 16:20:47,098 [INFO] OS Version: 10.0.26100
+2025-12-12 16:20:47,099 [INFO] Screen Resolution: 
+2025-12-12 16:20:47,099 [INFO] Test Start Time: 2025-12-12 16:20:47.099465
+2025-12-12 16:20:47,100 [INFO] ============================
+2025-12-12 16:20:47,100 [INFO] [TEST START] View Zoom In
+2025-12-12 16:20:47,100 [INFO] ============================================================
+2025-12-12 16:20:47,100 [INFO] Step 1: Connecting to Notepad application...
+2025-12-12 16:20:49,556 [INFO] Successfully connected to Notepad
+2025-12-12 16:20:50,751 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_zoom_initial_state_20251212_162050.png
+2025-12-12 16:20:50,751 [INFO] ============================================================
+2025-12-12 16:20:50,751 [INFO] Step 2: Clicking on View menu...
+2025-12-12 16:20:53,074 [INFO] Clicked View menu successfully
+2025-12-12 16:20:53,808 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_view_menu_opened_20251212_162053.png
+2025-12-12 16:20:53,808 [INFO] ============================================================
+2025-12-12 16:20:53,808 [INFO] Step 3: Clicking on Zoom submenu...
+2025-12-12 16:20:56,139 [INFO] Clicked Zoom submenu successfully
+2025-12-12 16:20:56,833 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_zoom_submenu_opened_20251212_162056.png
+2025-12-12 16:20:56,834 [INFO] ============================================================
+2025-12-12 16:20:56,834 [INFO] Step 4: Clicking on Zoom In...
+2025-12-12 16:21:01,626 [INFO] Clicked Zoom In successfully
+2025-12-12 16:21:01,876 [INFO] Screenshot saved: c:\Users\v-doruganti\OneDrive - Microsoft\Documents\Windows_App_Automation\WinTest\screenshots\notepad_zoom_in_applied_20251212_162101.png
+2025-12-12 16:21:01,877 [INFO] ============================================================
+2025-12-12 16:21:01,877 [INFO] [TEST PASSED] View Zoom In completed successfully in 15.23s
+2025-12-12 16:21:01,877 [INFO] All steps completed successfully!
+2025-12-12 16:21:01,877 [INFO] ================================================================================
+2025-12-12 16:21:01,877 [INFO] ALL TESTS COMPLETED SUCCESSFULLY
+2025-12-12 16:21:01,877 [INFO] ================================================================================

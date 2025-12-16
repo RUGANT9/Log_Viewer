@@ -1,0 +1,39 @@
+2025-12-11 13:02:19,461 - INFO - === System Configuration ===
+2025-12-11 13:02:19,602 - INFO - OS: Windows 11
+2025-12-11 13:02:19,603 - INFO - OS Version: 10.0.26100
+2025-12-11 13:02:19,603 - INFO - Screen Resolution: 
+2025-12-11 13:02:19,603 - INFO - Test Start Time: 2025-12-11 13:02:19.603674
+2025-12-11 13:02:19,603 - INFO - ============================
+2025-12-11 13:02:19,603 - INFO - Starting News app search test for topic: 'Taylor Swift'
+2025-12-11 13:02:19,603 - INFO - Step 1: Connecting to News application...
+2025-12-11 13:02:21,231 - INFO - Screenshot saved: screenshots\news_initial_state_20251211_130220.png
+2025-12-11 13:02:21,233 - INFO - Successfully connected to News app
+2025-12-11 13:02:21,233 - INFO - Step 2: Locating search box...
+2025-12-11 13:02:21,240 - WARNING - Could not find search box by automation_id: find_elements() got an unexpected keyword argument 'automation_id'
+2025-12-11 13:02:21,241 - INFO - Attempting coordinate-based click...
+2025-12-11 13:02:22,378 - INFO - Clicked search box area by coordinates
+2025-12-11 13:02:22,525 - INFO - Screenshot saved: screenshots\search_box_focused_20251211_130222.png
+2025-12-11 13:02:22,525 - INFO - Step 3: Entering search topic 'Taylor Swift'...
+2025-12-11 13:02:23,343 - WARNING - Could not type in search box object: find_elements() got an unexpected keyword argument 'automation_id'
+2025-12-11 13:02:23,343 - INFO - Attempting direct keyboard input...
+2025-12-11 13:02:25,471 - INFO - Sent search topic via keyboard: 'Taylor Swift'
+2025-12-11 13:02:25,566 - INFO - Screenshot saved: screenshots\search_text_entered_20251211_130225.png
+2025-12-11 13:02:25,566 - INFO - Step 4: Pressing Enter to search...
+2025-12-11 13:02:28,621 - INFO - Search submitted, waiting for results...
+2025-12-11 13:02:28,719 - INFO - Screenshot saved: screenshots\search_results_loading_20251211_130228.png
+2025-12-11 13:02:28,719 - INFO - Step 5: Waiting for articles to load...
+2025-12-11 13:02:31,808 - INFO - Screenshot saved: screenshots\search_results_displayed_20251211_130231.png
+2025-12-11 13:02:31,808 - INFO - Step 6: Validating article display...
+2025-12-11 13:02:34,642 - INFO - SUCCESS: Found 67 clickable article elements
+2025-12-11 13:02:34,643 - INFO -   Article 1: Back to Bing search
+2025-12-11 13:02:34,644 - INFO -   Article 2: Search button
+2025-12-11 13:02:34,645 - INFO -   Article 3: Chat with Copilot
+2025-12-11 13:02:34,651 - INFO -   Article 5: Notification Image Scan the QR code to get the app and start earning points today!
+2025-12-11 13:02:34,651 - INFO - ============================================================
+2025-12-11 13:02:34,651 - INFO - TEST RESULT: PASSED
+2025-12-11 13:02:34,651 - INFO - Successfully searched for 'Taylor Swift' and found 67 article links
+2025-12-11 13:02:34,651 - INFO - Articles are displayed and accessible
+2025-12-11 13:02:34,651 - INFO - ============================================================
+2025-12-11 13:02:34,750 - INFO - Screenshot saved: screenshots\test_complete_20251211_130234.png
+2025-12-11 13:02:34,750 - INFO - Test completed at 2025-12-11 13:02:34.750803
+2025-12-11 13:02:34,751 - INFO - ============================================================
