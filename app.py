@@ -5,34 +5,99 @@ from flask import Flask, render_template, jsonify, send_from_directory
 import os
 import re
 from datetime import datetime
+from azure.storage.blob import BlobServiceClient, ContainerClient
+from dotenv import load_dotenv
+from io import BytesIO
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__, static_folder='screenshots', static_url_path='/screenshots')
 
-# Path to log files
+# Azure Storage configuration
+AZURE_STORAGE_CONNECTION_STRING = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+CONTAINER_NAME = 'logs'
+
+# Path to log files (for local development fallback)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_DIR = os.path.join(BASE_DIR, 'logs')
 
-def parse_log_file(log_file_path):
-    """Parse the automation test log file and extract metrics."""
+# Initialize Azure Blob Storage client
+blob_service_client = None
+if AZURE_STORAGE_CONNECTION_STRING:
+    try:
+        blob_service_client = BlobServiceClient.from_connection_string(AZURE_STORAGE_CONNECTION_STRING)
+        print(f"✅ Connected to Azure Blob Storage")
+    except Exception as e:
+        print(f"⚠️  Failed to connect to Azure Blob Storage: {e}")
+        print(f"📂 Falling back to local storage: {LOG_DIR}")
+else:
+    print(f"⚠️  AZURE_STORAGE_CONNECTION_STRING not set")
+    print(f"📂 Using local storage: {LOG_DIR}")
+
+
+def get_log_content_from_azure(blob_name):
+    """Fetch log file content from Azure Blob Storage."""
+    try:
+        blob_client = blob_service_client.get_blob_client(container=CONTAINER_NAME, blob=blob_name)
+        
+        # Download blob content
+        download_stream = blob_client.download_blob()
+        content = download_stream.readall()
+        
+        # Try different encodings
+        encodings = ['utf-8', 'latin-1', 'cp1252', 'iso-8859-1']
+        for encoding in encodings:
+            try:
+                return content.decode(encoding)
+            except (UnicodeDecodeError, UnicodeError):
+                continue
+        
+        # Last resort: decode with errors='replace'
+        return content.decode('utf-8', errors='replace')
+    except Exception as e:
+        print(f"Error fetching blob {blob_name}: {e}")
+        return None
+
+
+def get_log_content_from_local(log_file_path):
+    """Fetch log file content from local storage (fallback)."""
     if not os.path.exists(log_file_path):
         return None
     
-    # Try different encodings to handle various log file formats
+    # Try different encodings
     encodings = ['utf-8', 'latin-1', 'cp1252', 'iso-8859-1']
-    content = None
-    
     for encoding in encodings:
         try:
             with open(log_file_path, 'r', encoding=encoding) as f:
-                content = f.read()
-            break
+                return f.read()
         except (UnicodeDecodeError, UnicodeError):
             continue
     
+    # Last resort
+    with open(log_file_path, 'r', encoding='utf-8', errors='replace') as f:
+        return f.read()
+
+
+def get_log_content(log_file):
+    """Get log file content from Azure Blob Storage or local fallback."""
+    # Try Azure Blob Storage first
+    if blob_service_client:
+        content = get_log_content_from_azure(log_file)
+        if content:
+            return content
+    
+    # Fallback to local storage
+    log_path = os.path.join(LOG_DIR, log_file)
+    return get_log_content_from_local(log_path)
+
+def parse_log_file(log_file):
+    """Parse the automation test log file and extract metrics."""
+    # Get content from Azure or local storage
+    content = get_log_content(log_file)
+    
     if content is None:
-        # Last resort: read as binary and decode with errors='replace'
-        with open(log_file_path, 'r', encoding='utf-8', errors='replace') as f:
-            content = f.read()
+        return None
     
     # Find the last test run by looking for lines containing STARTING, TEST, and SUITE
     lines = content.split('\n')
@@ -212,8 +277,7 @@ def index():
 @app.route('/api/logs/<log_file>')
 def get_log_data(log_file):
     """API endpoint to get parsed log data."""
-    log_path = os.path.join(LOG_DIR, log_file)
-    data = parse_log_file(log_path)
+    data = parse_log_file(log_file)
     
     if data is None:
         return jsonify({'error': 'Log file not found'}), 404
@@ -224,16 +288,40 @@ def get_log_data(log_file):
 def list_logs():
     """API endpoint to list available log files."""
     try:
-        # Find all .log files in the directory
         log_files = []
-        for f in os.listdir(LOG_DIR):
-            if f.endswith('.log') or f.endswith('_automation.log'):
-                log_files.append(f)
         
-        # Sort by modification time (most recent first)
-        log_files.sort(key=lambda x: os.path.getmtime(os.path.join(LOG_DIR, x)), reverse=True)
+        # Try Azure Blob Storage first
+        if blob_service_client:
+            try:
+                container_client = blob_service_client.get_container_client(CONTAINER_NAME)
+                blobs = container_client.list_blobs()
+                
+                for blob in blobs:
+                    if blob.name.endswith('.log') or blob.name.endswith('_automation.log'):
+                        log_files.append({
+                            'name': blob.name,
+                            'last_modified': blob.last_modified.timestamp() if blob.last_modified else 0
+                        })
+                
+                # Sort by modification time (most recent first)
+                log_files.sort(key=lambda x: x['last_modified'], reverse=True)
+                
+                return jsonify({'logs': [f['name'] for f in log_files], 'source': 'azure'})
+            except Exception as azure_error:
+                print(f"Azure error: {azure_error}, falling back to local storage")
         
-        return jsonify({'logs': log_files})
+        # Fallback to local storage
+        if os.path.exists(LOG_DIR):
+            for f in os.listdir(LOG_DIR):
+                if f.endswith('.log') or f.endswith('_automation.log'):
+                    log_files.append(f)
+            
+            # Sort by modification time (most recent first)
+            log_files.sort(key=lambda x: os.path.getmtime(os.path.join(LOG_DIR, x)), reverse=True)
+            
+            return jsonify({'logs': log_files, 'source': 'local'})
+        
+        return jsonify({'logs': [], 'source': 'none'})
     except Exception as e:
         return jsonify({'logs': [], 'error': str(e)})
 
