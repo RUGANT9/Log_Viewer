@@ -6,6 +6,7 @@ import os
 import re
 from datetime import datetime
 from azure.storage.blob import BlobServiceClient, ContainerClient
+from azure.identity import DefaultAzureCredential, ManagedIdentityCredential
 from dotenv import load_dotenv
 from io import BytesIO
 
@@ -16,6 +17,7 @@ app = Flask(__name__, static_folder='screenshots', static_url_path='/screenshots
 
 # Azure Storage configuration
 AZURE_STORAGE_CONNECTION_STRING = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+STORAGE_ACCOUNT_NAME = os.getenv('STORAGE_ACCOUNT_NAME', 'demowebapplogstore')
 CONTAINER_NAME = 'logs'
 
 # Path to log files (for local development fallback)
@@ -24,16 +26,15 @@ LOG_DIR = os.path.join(BASE_DIR, 'logs')
 
 # Initialize Azure Blob Storage client
 blob_service_client = None
-if AZURE_STORAGE_CONNECTION_STRING:
-    try:
-        blob_service_client = BlobServiceClient.from_connection_string(AZURE_STORAGE_CONNECTION_STRING)
-        print(f"✅ Connected to Azure Blob Storage")
-    except Exception as e:
-        print(f"⚠️  Failed to connect to Azure Blob Storage: {e}")
-        print(f"📂 Falling back to local storage: {LOG_DIR}")
-else:
-    print(f"⚠️  AZURE_STORAGE_CONNECTION_STRING not set")
-    print(f"📂 Using local storage: {LOG_DIR}")
+try:
+    credential = ManagedIdentityCredential(client_id='679fbd0c-2771-4f2c-a103-e447edfef464')
+    storage_url = f"https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net"
+    blob_service_client = BlobServiceClient(account_url=storage_url, credential=credential)
+    #blob_service_client = BlobServiceClient.from_connection_string(AZURE_STORAGE_CONNECTION_STRING)
+    print(f"✅ Connected to Azure Blob Storage")
+except Exception as e:
+    print(f"⚠️  Failed to connect to Azure Blob Storage: {e}")
+    print(f"📂 Falling back to local storage: {LOG_DIR}")
 
 
 def get_log_content_from_azure(blob_name):
