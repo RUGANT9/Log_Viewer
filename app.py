@@ -31,7 +31,7 @@ try:
     storage_url = f"https://{STORAGE_ACCOUNT_NAME}.blob.core.windows.net"
     blob_service_client = BlobServiceClient(account_url=storage_url, credential=credential)
     #blob_service_client = BlobServiceClient.from_connection_string(AZURE_STORAGE_CONNECTION_STRING)
-    print(f"✅ Connected to Azure Blob Storage")
+    print(f"✅ Connected to Azure Blob Storage using Managed Identity")
 except Exception as e:
     print(f"⚠️  Failed to connect to Azure Blob Storage: {e}")
     print(f"📂 Falling back to local storage: {LOG_DIR}")
